@@ -1,0 +1,219 @@
+nav{
+    background-color: #fff;
+    width: 100% !important;
+    height: auto;
+    border-radius: 0px !important;
+}
+
+nav .navbar-nav {
+    margin-top: 12px;
+}
+
+nav .navbar-nav a{
+    color: var(--main-color);
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-right: 10px;
+    font-size: 17px;
+    transition: all 0.3s ease;
+    display: inline;
+}
+
+nav .navbar-nav a:hover,
+nav .navbar-nav a:focus
+{
+    color: var(--orange-color) !important;
+}
+
+nav .navbar-nav .active{
+    color: var(--orange-color) !important;
+}
+
+.dropdown-toggle::after{
+    content: "\2b" !important;
+    border: none !important;
+    color: #bbbbcf;
+    font-weight: 700 !important;
+    font-size: 20px;
+    transform: translateY(5px);
+    transition: transform 0.5s ease; /* Add transition for smooth rotation */
+}
+
+.dropdown-toggle:hover:after,
+.dropdown-toggle:focus:after{
+    color: var(--orange-color) !important;
+    transform: translateY(5px) rotate(45deg); /* Rotate the pseudo-element by 90 degrees on hover */
+}
+
+nav .navbar-nav button{
+    background-color: var(--btn-color);
+    border: 1px solid var(--btn-color);
+    width: 180px;
+    height: 50px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-top: -10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    font-weight: 500;
+    box-shadow: 0 5px 20px 0 rgba(86, 90, 207, .3) !important;
+    transition: all 0.3s ease-in-out;
+}
+
+nav .navbar-nav button:hover{
+    background-color: #494bd0;
+}
+
+nav .navbar-nav button span{
+    background-color: #fff;
+    color: var(--btn-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 40px;
+}   
+
+nav .navbar-nav .dropdown-menu{
+    background-color: #fff;
+    border: 1px solid #fff;
+    position: static;
+    border-radius: 0px;
+    width: 200px;
+    padding: 10px 15px;
+}
+
+nav .navbar-nav .dropdown-menu a{
+    color: #666;
+    font-size: 14px;
+    line-height: 30px !important;
+    position: relative;
+    font-weight: 500;
+    width: fit-content;
+    padding-left: 0;
+    padding-right: 0;
+    display: block;
+}
+
+/* Keyframe animation for the ::before pseudo-element */
+@keyframes underlineExpand {
+    0% {
+        width: 0; /* Start with no width */
+    }
+    50% {
+        width: 50%; /* Expand to full width */
+    }
+    100% {
+        width: 100%; /* Expand to full width */
+    }
+}
+
+nav .navbar-nav .dropdown-menu a::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    background-color: var(--main-color);
+    width: 0; /* Start with no width */
+    transition: all 0.3s ease;
+}
+
+nav .navbar-nav .dropdown-menu a:hover::before {
+    animation: underlineExpand 0.4s ease forwards; /* Apply the keyframe animation on hover */
+}
+
+nav .navbar-nav .dropdown-menu a:hover{
+    color: var(--main-color);
+    background-color: #fff;
+}
+
+.whitelogo{
+    display: none;
+}
+
+.fa-phone{
+    color: var(--btn-color);
+    padding: 10px;
+    background-color: #E7E7FA;
+    border-radius: 6px;
+    margin-right: 8px;
+}
+
+.search{
+    color: var(--btn-color);
+    transition: all 0.3s ease;
+}
+
+.search:hover{
+    color: var(--orange-color);
+}
+
+@media(max-width: 1200px){
+    .phone{
+        display: none !important;
+    }
+}
+
+@media(max-width: 992px){
+    nav {
+        background-color: #171a1e;
+    }
+
+    nav .navbar-nav .dropdown-menu{
+        width: 100%;
+    }
+
+    .whitelogo{
+        display: block;
+    }
+
+    .blacklogo{
+        display: none;
+    }
+
+    nav .navbar-nav a{
+        color: #fff;
+        border-bottom: 1px solid hsla(0, 0%, 100%, .1);
+        padding-bottom: 15px !important;
+        display: block;
+    }
+
+    nav .navbar-nav .dropdown-menu{
+        background-color: transparent;
+        border: none;
+    }
+
+    nav .navbar-nav .dropdown-menu a{
+        width: 100%;
+        color: hsla(0, 0%, 100%, .7);
+        border-bottom: 1px solid hsla(0, 0%, 100%, .1);
+    }
+
+    nav .navbar-nav .dropdown-menu a:hover{
+        background-color: transparent;
+        color: #565acf !important;
+    }
+
+    nav .navbar-nav .dropdown-menu a:hover::before {
+        animation: none;
+    }
+
+    .navbar-toggler{
+        background-color: var(--btn-color) !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    .navbar-toggler-icon{
+        background-image: url('../../Assets/whitebar.png') !important;
+    }
+
+    nav .navbar-nav button{
+        margin-top: 0;
+    }
+}
