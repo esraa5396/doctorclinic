@@ -1,6 +1,10 @@
 header{
     margin-top: 0;
+    padding-top: 60px;
     background-image: url(../../src/Assets/bgimage.jpg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
     z-index: 1;
 }
@@ -17,6 +21,10 @@ header::after{
     position: absolute;
     width: 100%;
     z-index: -1;
+}
+
+header .container{
+    margin-top: 50px;
 }
 
 header .row{

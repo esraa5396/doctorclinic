@@ -1,8 +1,14 @@
 nav{
-    background-color: #fff;
+    background-color: transparent;
     width: 100% !important;
     height: auto;
     border-radius: 0px !important;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* box-shadow: 0 0 50px 0 rgba(0,0,0,.1); */
+    z-index: 10;
 }
 
 nav .navbar-nav {
@@ -22,10 +28,24 @@ nav .navbar-nav a{
 nav .navbar-nav a:hover,
 nav .navbar-nav a:focus
 {
-    color: var(--orange-color) !important;
+    color: var(--orange-color);
 }
 
 nav .navbar-nav .active{
+    color: var(--orange-color) !important;
+}
+
+.nav.scrolled {
+    background-color: white !important;
+    box-shadow: 0 0 50px 0 rgba(0,0,0,.1);
+}
+
+.nav.scrolled .navbar-nav a {
+    color: var(--main-color) !important;
+}
+
+.nav.scrolled .navbar-nav a:hover,
+.nav.scrolled .navbar-nav a:focus {
     color: var(--orange-color) !important;
 }
 
@@ -48,24 +68,25 @@ nav .navbar-nav .active{
 nav .navbar-nav button{
     background-color: var(--btn-color);
     border: 1px solid var(--btn-color);
-    width: 180px;
-    height: 50px;
-    color: #fff;
+    width: 180px !important;
+    height: 50px !important; 
+    color: #fff !important; 
     text-transform: uppercase;
-    font-size: 15px;
-    margin-top: -10px;
+    font-size: 15px !important;
+    margin-top: -10px !important; 
     border-radius: 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 20px;
-    font-weight: 500;
+    padding-left: 20px !important;
+    font-weight: 500 !important;
     box-shadow: 0 5px 20px 0 rgba(86, 90, 207, .3) !important;
     transition: all 0.3s ease-in-out;
 }
 
 nav .navbar-nav button:hover{
-    background-color: #494bd0;
+    background-color: #494bd0 !important;
+    color: #fff !important;
 }
 
 nav .navbar-nav button span{
@@ -99,6 +120,8 @@ nav .navbar-nav .dropdown-menu a{
     display: block;
 }
 
+
+
 /* Keyframe animation for the ::before pseudo-element */
 @keyframes underlineExpand {
     0% {
@@ -128,15 +151,20 @@ nav .navbar-nav .dropdown-menu a:hover::before {
 }
 
 nav .navbar-nav .dropdown-menu a:hover{
-    color: var(--main-color);
+    color: var(--main-color) !important;
     background-color: #fff;
 }
 
-.whitelogo{
+.nav.scrolled .navbar-nav .dropdown-menu a:hover{
+    color: var(--main-color) !important;
+    background-color: #fff;
+}
+
+nav .whitelogo{
     display: none;
 }
 
-.fa-phone{
+nav .navbar-nav .fa-phone{
     color: var(--btn-color);
     padding: 10px;
     background-color: #E7E7FA;
@@ -144,36 +172,96 @@ nav .navbar-nav .dropdown-menu a:hover{
     margin-right: 8px;
 }
 
-.search{
+nav .search{
     color: var(--btn-color);
     transition: all 0.3s ease;
 }
 
-.search:hover{
+nav .search:hover{
     color: var(--orange-color);
 }
 
 @media(max-width: 1200px){
-    .phone{
+    nav .phone{
         display: none !important;
     }
 }
 
 @media(max-width: 992px){
-    nav {
-        background-color: #171a1e;
+    .nav.scrolled {
+        background-color: #171a1e !important;
+        box-shadow: 0 0 50px 0 rgba(0,0,0,.1);
+    }
+
+    .nav.scrolled .navbar-nav{
+        padding: 0 !important;
+    }
+    
+    .nav.scrolled .navbar-nav a {
+        color: #fff !important;
+        border-bottom: 1px solid hsla(0, 0%, 100%, .1);
+        padding-bottom: 15px !important;
+        display: block;
+    }
+    
+    .nav.scrolled .navbar-nav a:hover,
+    .nav.scrolled .navbar-nav a:focus {
+        color: var(--orange-color) !important;
+    }
+
+    .nav.scrolled .navbar-nav .dropdown-menu{
+        width: 100%;
+    }
+
+    .nav.scrolled .whitelogo{
+        display: block;
+    }
+
+    .nav.scrolled .blacklogo{
+        display: none;
+    }
+
+    .nav.scrolled .navbar-nav .dropdown-menu{
+        background-color: transparent;
+        border: none;
+    }
+
+    .nav.scrolled .navbar-nav .dropdown-menu a{
+        width: 100%;
+        color: hsla(0, 0%, 100%, .7) !important;
+        border-bottom: 1px solid hsla(0, 0%, 100%, .1);
+    }
+
+    .nav.scrolled .navbar-nav .dropdown-menu a:hover{
+        background-color: transparent;
+        color: #565acf !important;
+    }
+
+    .nav.scrolled .navbar-nav .dropdown-menu a:hover::before {
+        animation: none;
+    }
+
+    .nav.scrolled .navbar-toggler{
+        background-color: var(--btn-color) !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    .nav.scrolled .navbar-toggler-icon{
+        background-image: url('../../Assets/whitebar.png') !important;
+    }
+
+    .nav.scrolled .navbar-nav button{
+        margin-top: 0;
+    }
+
+    nav .navbar-nav{
+        background-color: #171a1e !important;
+        padding: 30px;
     }
 
     nav .navbar-nav .dropdown-menu{
         width: 100%;
-    }
-
-    .whitelogo{
-        display: block;
-    }
-
-    .blacklogo{
-        display: none;
     }
 
     nav .navbar-nav a{
@@ -216,4 +304,61 @@ nav .navbar-nav .dropdown-menu a:hover{
     nav .navbar-nav button{
         margin-top: 0;
     }
+
+    /* nav {
+        background-color: #171a1e;
+    }
+
+    nav .navbar-nav .dropdown-menu{
+        width: 100%;
+    }
+
+    nav .whitelogo{
+        display: block;
+    }
+
+    nav .blacklogo{
+        display: none;
+    }
+
+    nav .navbar-nav a{
+        color: #fff;
+        border-bottom: 1px solid hsla(0, 0%, 100%, .1);
+        padding-bottom: 15px !important;
+        display: block;
+    }
+
+    nav .navbar-nav .dropdown-menu{
+        background-color: transparent;
+        border: none;
+    }
+
+    nav .navbar-nav .dropdown-menu a{
+        width: 100%;
+        color: hsla(0, 0%, 100%, .7);
+        border-bottom: 1px solid hsla(0, 0%, 100%, .1);
+    }
+
+    nav .navbar-nav .dropdown-menu a:hover{
+        background-color: transparent;
+        color: #565acf !important;
+    }
+
+    nav .navbar-nav .dropdown-menu a:hover::before {
+        animation: none;
+    }
+
+    .navbar-toggler{
+        background-color: var(--btn-color) !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    .navbar-toggler-icon{
+        background-image: url('../../Assets/whitebar.png') !important;
+    }
+
+    nav .navbar-nav button{
+        margin-top: 0;
+    } */
 }
