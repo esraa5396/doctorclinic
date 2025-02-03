@@ -8,6 +8,10 @@ import shape4 from '../../src/Assets/download (7).png';
 import shape5 from '../../src/Assets/download (11).png';
 import About from '../Component/about/About';
 import WorkingProcess from '../Component/WorkingProcess/WorkingProcess';
+import Appointment from '../Component/appointment/Appointment';
+import Services from '../Component/services/Services';
+import Testimonial from '../Component/testimonial/Testimonial';
+import News from '../Component/news/News';
 
 export default function Home() {
   return (
@@ -37,6 +41,10 @@ export default function Home() {
         </header>
         <About />
         <WorkingProcess />
+        <Appointment />
+        <Services/>
+        <Testimonial />
+        <News />
     </>
     
   )

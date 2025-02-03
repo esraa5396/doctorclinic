@@ -1,0 +1,121 @@
+.services{
+    overflow: hidden;
+    position: relative;
+    padding: 70px 0;
+}
+
+.services::after{
+    content: "";
+    position: absolute;
+    background-color: var(--btn-color);
+    border-radius: 40px 0 0 40px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    width: 45%;
+    z-index: -1;
+}
+
+.services .text{
+    margin-bottom: 30px;
+}
+
+.services .heading-bx .heading .container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.services .heading-bx .heading h6{
+    text-align: left !important;
+}
+
+.services .heading-bx .heading h2{
+    text-align: start !important;
+    font-size: 36px;
+}
+
+.services .heading-bx p{
+    color: #333;
+    padding-top: 5px;
+    font-weight: 500;
+}
+
+.services .services-btn-bx{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.services .service-btn{
+    background-color: var(--orange-color);
+    border: none;
+    padding: 15px 35px;
+    border: 2px solid var(--orange-color);
+    margin-top: 15px;
+    text-align: center;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.services .service-btn:hover{
+    background-color: #f49762;
+    border-color: #f49762;
+}
+
+.services .serviceshape .shape{
+    position: absolute;
+    z-index: -1;
+}
+
+.services .serviceshape .serviceshape1{
+    top: 0;
+    left: 40%;
+    width: 80px;
+    animation: translateY 2.5s linear infinite alternate; /* Added animation */
+}
+
+.services .serviceshape .serviceshape2{
+    top: 60px;
+    left: 80px;
+    width: 80px;
+    opacity: 0.2;
+    animation: rotate 20s linear infinite alternate; /* Added animation */
+}
+
+.services .serviceshape .serviceshape3{
+    bottom: 50px;
+    left: 150px;
+    /* width: 80px; */
+    animation: translateY 3s linear infinite alternate; /* Added animation */
+}
+
+.services .serviceshape .serviceshape4{
+    bottom: 30px;
+    left: 50%;
+    width: 80px;
+    animation: translateX 3s linear infinite alternate; /* Added animation */
+}
+
+@media(max-width: 991px){
+    .services::after{
+        width: 100%;
+    }
+
+    .services .heading-bx .heading h2,
+    .services .heading-bx p{
+        color: #fff;
+    }
+}
+
+@media(max-width: 767px){
+    .services .heading-bx .heading h2{
+        font-size: 30px;
+    }
+}

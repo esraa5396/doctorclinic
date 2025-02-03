@@ -1,0 +1,199 @@
+.appointment{
+    overflow: hidden;
+    padding: 100px 0;
+
+}
+
+.appointment .inner-appointment{
+    background-image: url('../../Assets/appointmentbg.png');
+    background-repeat: no-repeat;
+    background-position: 20px 140px;
+    background-color: #f5f5fc;
+    border-radius: 40px;
+    position: relative;
+    z-index: 1;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.appointment .inner-appointment .appointment-form{
+    margin-left: 50px;
+    background-color: #fff;
+    border-radius: 40px;
+    padding: 40px 35px;
+    text-align: center;
+    box-shadow: 0 10px 60px 0 rgba(31, 34, 120, .1);
+    position: relative;
+}
+
+.appointment .inner-appointment .appointment-form::after{
+    position: absolute;
+    border: 2px solid var(--btn-color);
+    content: "";
+    border-radius: 40px;
+    height: 100%;
+    left: -20px;
+    top: -20px;
+    width: 100%;
+    z-index: -1;
+}
+
+.appointment .inner-appointment .appointment-form .title{
+    margin-bottom: 30px;
+    color: var(--main-color);
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.appointment .inner-appointment .appointment-form .form-group{
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.appointment .inner-appointment .appointment-form .form-group .form-control{
+    border: 1px solid rgba(86, 90, 207, .3);
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    height: 60px;
+    padding: 15px 25px;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+}
+
+.appointment .inner-appointment .appointment-form .form-group .form-control:focus,
+.appointment .inner-appointment .appointment-form .form-group .form-control:hover{
+    outline: none;
+    box-shadow: none;
+    border-color: var(--btn-color);
+}
+
+.appointment .inner-appointment .appointment-form .btn-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.appointment .inner-appointment .appointment-form .btn-submit{
+    background-color: var(--orange-color);
+    border: none;
+    padding: 25px 35px;
+    border: 2px solid var(--orange-color);
+    margin-top: 15px;
+    text-align: center;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.appointment .inner-appointment .appointment-form .btn-submit:hover{
+    background-color: #f49762;
+    border-color: #f49762;
+}
+
+.appointment .inner-appointment .images{
+    position: relative;
+    width: 100%;
+}
+
+.appointment .inner-appointment .images .mobile{
+    max-width: 100%;
+    height: auto;
+}
+
+.appointment .inner-appointment .images .image-group img{
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.appointment .inner-appointment .images .image-group .girl{
+    height: 500px;
+    right: 20px;
+    bottom: 16px;
+    animation: translateX 2s linear infinite alternate; /* Added animation */
+}
+
+.appointment .inner-appointment .images .image-group .location{
+    bottom: 240px;
+    left: 93px;
+    animation: translateY 2.3s linear infinite alternate; /* Added animation */
+
+}
+
+.appointment .inner-appointment .images .image-group .like{
+    right: 80px;
+    top: 30px;
+    animation: translateY 2s linear infinite alternate; /* Added animation */
+
+}
+
+.appointment .inner-appointment .images .image-group .right{
+    left: 40px;
+    top: 150px;
+    animation: translateY 1.5s linear infinite alternate; /* Added animation */
+
+}
+
+.appointment .inner-appointment .images .image-group .setting{
+    right: 225px;
+    bottom: 120px;
+    animation: translateY 2.5s linear infinite alternate; /* Added animation */
+}
+
+@media(max-width: 1275px){
+    .appointment .inner-appointment .images .image-group .girl{
+        height: 400px;
+    }
+
+    .appointment .inner-appointment .images .image-group .location,
+    .appointment .inner-appointment .images .image-group .like{
+        width: 80px;
+    }
+
+    .appointment .inner-appointment .images .image-group .right{
+        width: 50px;
+    }
+
+    .appointment .inner-appointment .images .image-group .setting{
+        width: 70px;
+    }
+
+}
+
+@media(max-width: 1190px){
+    .appointment .inner-appointment .images .image-group .girl{
+        height: 280px;
+    }
+ 
+    .appointment .inner-appointment .images .image-group .location{
+        width: 60px;
+        bottom: 170px;
+        left: 62px;
+    }
+
+    .appointment .inner-appointment .images .image-group .like{
+        width: 70px;
+        right: 70px;
+        top: 60px;
+    }
+
+    .appointment .inner-appointment .images .image-group .right{
+        width: 40px;
+        left: 20px;
+        top: 80px;
+    }
+
+    .appointment .inner-appointment .images .image-group .setting{
+        width: 50px;
+        right: 154px;
+        bottom: 90px;
+    }
+}
+

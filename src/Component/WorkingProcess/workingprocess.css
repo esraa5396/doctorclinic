@@ -1,0 +1,162 @@
+.working{
+    position: relative;
+    background-image: url('../../Assets/workbg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    padding-bottom: 50px;
+    padding-top: 30px;
+    font-family: "Montserrat", serif;
+}
+
+.working .work-bx{
+    margin-top: 30px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 60px 0 rgba(31, 34, 120, .1);
+    overflow: hidden;
+    padding: 40px 30px;
+    position: relative;
+    z-index: 1;
+    transition: all 0.5s;
+}
+
+.working .work-bx::after{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    content: "";
+    background-color: var(--orange-color);
+    z-index: -1;
+    width: 100%;
+    height: 0;
+    transition: all 0.5s;
+}
+
+.working .work-bx:hover::after{
+    height: 100%;
+}
+
+.working .work-bx .work-num-bx{
+    -webkit-text-stroke: 2px var(--orange-color);
+    color: transparent;
+    font-size: 80px;
+    font-weight: 900;
+    line-height: 80px;
+    margin-bottom: 30px;
+    text-shadow: 0 10px 0 #ffe3d3;
+    transition: all 0.5s;
+    font-family: "Montserrat", serif;
+}
+
+.working .work-bx .work-content{
+    margin-bottom: 30px;
+}
+
+.working .work-bx .work-content h5{
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--orange-color);
+    font-weight: 700;
+    font-family: "Montserrat", serif;
+}
+
+.working .work-bx .work-content p{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    margin-bottom: 30px;
+    color: #444;
+}
+
+.working .work-bx .view-btn{
+    background-color: #e1e2f6;
+    color: var(--orange-color);
+    font-size: 14px;
+    padding: 15px 30px;
+    padding-right: 60px;
+    border-radius: 8px;
+    font-weight: 600;
+    color: var(--btn-color);
+    position: relative;
+    display: inline-block;
+}
+
+.working .work-bx .view-btn svg{
+    padding: 12px;
+    background-color: #fff;
+    display: inline;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 22px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.working .work-bx:hover .work-num-bx {
+    -webkit-text-stroke: 2px #fff;
+    text-shadow: 0 10px 0 #f38f5e;
+}
+
+.working .work-bx:hover .work-content h5,
+.working .work-bx:hover .work-content p {
+    color: #fff;
+}
+
+.working .work-bx:hover .view-btn {
+    background-color: #fff;
+    color: var(--orange-color);
+}
+
+.working .work-bx:hover .view-btn svg {
+    background-color: var(--orange-color);
+    color: #fff;
+}
+
+.working .active{
+    background-color: var(--orange-color);
+}
+
+.working .active .work-num-bx{
+    -webkit-text-stroke: 2px #fff;
+    text-shadow: 0 10px 0 #f38f5e;
+}
+
+.working .active .work-content h5,
+.working .active .work-content p{
+    color: #fff;
+}
+
+.working .active .view-btn{
+    background-color: #fff;
+    color: var(--orange-color);
+}
+
+.working .active .view-btn svg{
+    background-color: var(--orange-color);
+    color: #fff;
+}
+
+.working .workingshape .shape{
+    position: absolute;
+    z-index: -1;
+}
+
+.working .workingshape .workshape1{
+    bottom: 15%;
+    left: 3%;
+    animation: translateY 4s linear infinite alternate; /* Added animation */
+}
+
+.working .workingshape .workshape2{
+    right: 3%;
+    top: 50%;
+    animation: translateY 4s linear infinite alternate; /* Added animation */
+}
+
+.working .workingshape .workshape3{
+    bottom: 5%;
+    right: 25%;
+    animation: translateY 4s linear infinite alternate; /* Added animation */
+}

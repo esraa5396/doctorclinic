@@ -1,0 +1,98 @@
+.feature-bx{
+    background-color: white;
+    background-image: url('../../Assets/featurebg.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 1px 1px 50px rgba(0, 0, 0, .08);
+    padding: 40px 15px;
+    z-index: 1;
+    margin: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: grabbing;
+}
+
+.feature-bx .imgbx{
+    background: #fff;
+    width: 130px;
+    height: 130px;
+    line-height: 130px;
+    border: 2px solid rgba(86, 90, 207, .1);
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.feature-bx .imgbx svg{
+    width: 60px;
+    height: 60px;
+}
+
+.feature-bx .imgbx .icon1 path{
+    fill: rgb(178, 240, 251);
+}
+
+.feature-bx .imgbx .icon2 path{
+    fill: rgb(2, 2, 136);
+}
+
+.feature-bx .imgbx .icon3 path{
+    fill: rgb(164, 252, 196);
+}
+
+.feature-bx .imgbx .icon4 path{
+    fill: rgb(255, 189, 188);
+}
+
+.feature-bx .imgbx .icon5 path{
+    fill: rgb(226, 196, 255);
+}
+
+.feature-bx .title{
+    margin-bottom: 8px;
+    color: var(--main-color);
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.feature-bx p{
+    color: #444;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.feature-bx .btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-bx .btn .view-more{
+    background-color: #e1e2f6;
+    border: none;
+    padding: 15px 35px;
+    border: 2px solid #e1e2f6;
+    margin-top: 15px;
+    text-align: center;
+    color: var(--btn-color);
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.feature-bx .btn .view-more:hover{
+    background-color: var(--btn-color);
+    color: #fff;
+}

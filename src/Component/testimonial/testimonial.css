@@ -1,0 +1,191 @@
+.testimonial{
+    padding-top: 100px;
+    position: relative;
+}
+
+.testimonial .image{
+    position: relative;
+    display: inline-block;
+}
+
+.testimonial .image .bg-img{
+    /* position: relative; */
+    z-index: -2;
+    max-width: 100%;
+    height: auto;
+}
+
+.testimonial .image .doc1img,
+.testimonial .image .doc2img,
+.testimonial .image .doc3img,
+.testimonial .image .doc4img,
+.testimonial .image .doc5img,
+.testimonial .image .doc6img{
+    box-shadow: 0 10px 60px 0 rgba(31, 34, 120, .1);
+    border-radius: 50%;
+    display: block;
+    width: 65px;
+    height: 65px;
+}
+
+.testimonial .image .doc1{
+    position: absolute;
+    left: 6%;
+    top: 19%;
+}
+
+.testimonial .image .doc2{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+}
+
+.testimonial .image .doc3{
+    position: absolute;
+    right: 6%;
+    top: 19%;
+}
+
+.testimonial .image .doc4{
+    position: absolute;
+    bottom: 27%;
+    left: 5%;
+}
+
+.testimonial .image .doc5{
+    position: absolute;
+    bottom: 27%;
+    right: 5%;
+}
+
+.testimonial .image .doc6{
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.testimonial .testimonial-bx{
+    background-color: var(--orange-color);
+    border-radius: 40px 0 40px 40px;
+    box-shadow: 0 0 30px rgba(185, 67, 0, .1);
+    margin: 50px 20px 20px;
+    padding: 50px;
+    position: relative;
+}
+
+.testimonial .testimonial-bx::after {
+    position: absolute;
+    content: "\f10e"; /* Unicode for the quote-left icon */
+    font-family: "Font Awesome 5 Free"; /* FontAwesome font family */
+    font-weight: 900; /* FontAwesome solid style */
+    font-size: 92px; /* Adjust the size as needed */
+    color: #fff; /* Adjust the color as needed */
+    opacity: 0.3; /* Adjust the opacity as needed */
+    bottom: 20px;
+    right: 40px;
+    line-height: 92px;
+}
+
+.testimonial .testimonial-bx .testimonial-content p{
+    margin-bottom: 30px;
+    font-size: 18px;
+    font-style: italic;
+    color: #fff;
+    font-weight: 400;
+}
+
+.testimonial .testimonial-bx .client-info .name{
+    font-size: 22px;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.testimonial .testimonial-bx .client-info p{
+    font-size: 14px;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.testimonial .testimonial-bx .quote-icon{
+    position: absolute;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 10px 60px 0 rgba(31, 34, 120, .1);
+    font-size: 36px;
+    height: 75px;
+    width: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--orange-color);
+    top: -13%;
+    font-weight: 900;
+}
+
+.slick-dots li.slick-active button::before {
+    color: var(--orange-color) !important; /* Change this to your desired color */
+}
+
+.testimonial .testimonialshape .shape{
+    position: absolute;
+    z-index: -1;
+}
+
+.testimonial .testimonialshape .testimonialshape1{
+    left: 180px;
+    top: 165px;
+    width: 80px;
+    animation: translateY 6s linear infinite alternate; /* Added animation */
+}
+
+.testimonial .testimonialshape .testimonialshape2{
+    bottom: 30px;
+    left: 30px;
+    animation: translateY 4s linear infinite alternate; /* Added animation */
+}
+
+.testimonial .testimonialshape .testimonialshape3{
+    right: 90px;
+    top: 140px;
+}
+
+.testimonial .testimonialshape .testimonialshape4{
+    bottom: 30px;
+    right: 30px;
+}
+
+@media(max-width: 767px){
+    .testimonial .heading .stitle{
+        font-size: 30px;
+    }
+
+    .testimonial .testimonial-bx{
+        padding: 30px;
+    }
+
+    .testimonial .testimonial-bx .testimonial-content p{
+        font-size: 16px;
+    }
+
+    .testimonial .testimonial-bx .client-info .name{
+        font-size: 18px;
+    }
+
+    .testimonial .testimonial-bx .client-info p{
+        font-size: 12px;
+    }
+
+    .testimonial .testimonial-bx .quote-icon{
+        font-size: 30px;
+        height: 60px;
+        width: 60px;
+    }
+
+    .testimonial .testimonialshape .shape{
+        display: none;
+    }
+}
